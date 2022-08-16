@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Registration page</title>
+    <h1 align="center" style="color:red;background-color:blue;font-family:Algerian;font-style:oblique;font-size:40px;">RENTIAL WEB</h1>
+    <style>
+        table {
+            position: absolute;
+            top: 25%;
+            left: 37%;
+            border: 5px solid blue;
+        }
+    </style>
+    
+</head>
+<body>
+    <form method="post" onSubmit="return validate(this)" action="store.jsp" name="form">
+        <table cellspacing="15">
+            <caption>Register</caption>
+            <tr>
+                <td>First Name</td>
+                <td>:</td>
+                <td><input type="text" id="FName" name="fname" placeholder="First Name" /></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>:</td>
+                <td><input type="text" id="LName" name="lname" placeholder="Last Name" /></td>
+            </tr>
+           <tr>
+                <td>Gender</td>
+                <td></td>
+                <td>
+                    <input type="radio" value="M" name="gender" />Male&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" value="F" name="gender" />Female
+                </td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td>:</td>
+                <td><input type="number" length="10" id="phone" name="phone" placeholder="0000000000" /></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>:</td>
+                <td><input type="email" name="email" id="email" placeholder="example@gmail.com" /></td>
+            </tr>
+            <tr>
+                <td>Profile pic</td>
+                <td>:</td>
+                <td><input type="file" name="profile"/></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>:</td>
+                <td><textarea name="address" id="address" placeholder="Address"></textarea></td>
+            </tr>
+            <tr>
+            <td>Create Password</td>
+            <td>:</td>
+            <td><input type="password" name="pwd" id="pwd" placeholder="password"/>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="Submit" onMouseOver="big(this)" onmouseout="normal(this)" id="rsubmit" name="rsubmit" value="Submit" /></td>
+                <td></td>
+                <td>Already have an account?<a href="login.html">Click Here</a></td>
+            </tr>
+        </table>
+    </form>
+    <p id="p"></p>
+<script language="javascript">
+        var ck_email=/^[a-z]{5,20}[0-9]{3,10}@gmail.com+|@yahoo.com+$/;
+        var ck_pwd = /[a-zA-Z0-9@!#$%*&()_]{8,20}/;
+        var phone = /^[6-9]{1}[0-9]{9}$/;
+        function validate(form) {
+            let phn =document.getElementById("phone").value;
+            var email=form.email.value;
+            var password=form.pwd.value;
+            if(!ck_email.test(email)){
+            	alert("enter valid email");
+            	return false
+            }
+            if (!ck_pwd.test(password)) {
+                alert("Please enter valid password");
+                return false;
+            }
+            if (!phone.test(phn)) {
+                alert("Please enter valid phone number");
+                return false;
+            }
+            return true;
+        }
+        function big(x){
+            x.style.height="30px";
+            x.style.width="60px";
+        }
+        function normal(x){
+            x.style.height="20px";
+            x.style.width="55px";
+        }
+    </script>
+</body>
+</body>
+</html>

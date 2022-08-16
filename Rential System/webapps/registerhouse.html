@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+table{
+border:2px solid blue;}</style>
+</head>
+<body>
+<form method="post" action="houseregister.jsp">
+<table align="center">
+<caption>House Details</caption>
+<tr>
+<td>Street</td>
+<td>:</td>
+<td><input type="text" name="street" placeholder="enter street name"/></td>
+</tr>
+<tr>
+<td>City</td>
+<td>:</td>
+<td><input type="text" name="city" placeholder="enter city name"/></td>
+</tr>
+<tr>
+<td>PinCode</td>
+<td>:</td>
+<td><input type=number name="pin" placeholder="enter pin code"/></td>
+</tr>
+<tr>
+<td>Address</td>
+<td>:</td>
+<td><textarea rows="3" name="address"></textarea></td>
+</tr>
+<tr>
+<td>Type</td>
+<td>:</td>
+<td><select name="type">
+<option>1BHK</option>
+<option>2BHK</option>
+<option>3BHK</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Rent</td>
+<td>:</td>
+<td><input type=number name="rent" placeholder="enter price for rent"/></td>
+</tr>
+<tr>
+<td>Preference</td>
+<td>:</td>
+<td><select name="preference">
+<option>Bachelor</option>
+<option>Family</option>
+<option>None</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Image1</td>
+<td>:</td>
+<td><input type="file" name="img1"/></td>
+</tr>
+<tr>
+<td>Image2</td>
+<td>:</td>
+<td><input type="file" name="img2"/></td>
+</tr>
+<tr>
+<td>Image3</td>
+<td>:</td>
+<td><input type="file" name="img3"/></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" value="submit"/></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
